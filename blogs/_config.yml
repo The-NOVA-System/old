@@ -1,0 +1,29 @@
+theme: jekyll-theme-slate
+title: The NOVA System
+description: a work in progress
+author: Garv Shah
+markdown: kramdown
+baseurl: "/blog"
+url: "https://the-nova-system.github.io"
+
+social-network-links:
+  email: "gshah.6110@gmail.com"
+  github: The-NOVA-System
+
+navbar-links:
+  Home: "https://the-nova-system.github.io/blog"
+  Website: "https://the-nova-system.github.io"
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:title
+
+plugins:
+  - jekyll-feed
+
+kramdown:
+  math_engine: katex
+feed:
+  posts_limit: 50
+  excerpt_only: true
