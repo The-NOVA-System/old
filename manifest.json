@@ -2,6 +2,7 @@
   "short_name": "NOVA",
   "name": "The NOVA System",
   "theme_color": "#2d388a",
+  "apple-touch-icon": "https://the-nova-system.github.io/assets/img/apple-touch-icon.png",
   "icons": [
     {
       "src": "https://the-nova-system.github.io/assets/img/nova-app-192x192.png",
