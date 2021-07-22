@@ -16,7 +16,8 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "index.html",
+  "start_url": ".",
   "background_color": "#2b6ab4",
+  "description": "The NOVA System's official website",
   "display": "fullscreen"
 }
