@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
     <link rel="stylesheet" href="assets/css/Team-Boxed.css">
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 
 <body>
@@ -45,12 +46,15 @@
                 <div class="heading">
                     <h2>Contact Us</h2>
                 </div>
-                <form data-bss-recipient="bec70dd98240cd74a59cbff3cd1e5cf9" data-bss-redirect-url="index.html">
-                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="mb-3"><label class="form-label" for="subject">Subject</label><input class="form-control item" type="text" id="subject"></div>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message"></textarea></div>
-                    <div class="mb-3"><button class="btn btn-primary btn-lg d-block w-100" type="submit">Submit Form</button></div>
+                <form action="https://send.pageclip.co/dCK42sJinGvUQf8fpxvtoDeZrsZNZE9L" class="pageclip-form" method="post">
+                    <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+                    <div class="mb-3"><label class="form-label" for="name">Your Name</label><input class="form-control item" id="name" type="text" name="name" required/></div>
+                    <div class="mb-3"><label class="form-label" for="email">Your Email</label><input class="form-control item" id="email" type="email" name="email" required/></div>
+                    <div class="mb-3"><label class="form-label" for="subject">Subject</label><input class="form-control item" id="subject" type="text" name="subject" required/></div>
+                    <div class="mb-3"><label class="form-label" for="message">Message</label><textarea class="form-control item" id="message" type="text" name="body" required></textarea></div>
+
+                    <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+                    <div class="mb-3"><button type="submit" class="pageclip-form__submit btn btn-primary btn-lg d-block w-100"><span>Send</span></button></div>
                 </form>
             </div>
         </section>
@@ -61,6 +65,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
+    <script>
+        const form = document.querySelector('.pageclip-form')
+        Pageclip.form(form, {
+            onResponse: function (error, response) {
+                setTimeout(function(){
+                    window.location.href = '../';
+                },2000);
+            },
+        })
+    </script>
 </body>
 
 </html>
