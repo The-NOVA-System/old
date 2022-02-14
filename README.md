@@ -1,2 +1,2 @@
 # nova-system
-grade 9 community project
+the old website for the nova system
